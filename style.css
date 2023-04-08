@@ -65,6 +65,8 @@ body {
   align-items: center;
   gap: 2rem;
 
+  margin: 0 10px;
+
   text-align: left;
 }
 
@@ -119,4 +121,34 @@ body {
   grid-area: calculator;
 
   border-top: 4px solid var(--blue);
+}
+
+/* media queries */
+@media only screen and (max-width: 1024px) {
+  .grid-sections {
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    margin: 50px 10px;
+  }
+
+  .container h1 {
+    font-size: 1.25rem;
+  }
+
+  .container p {
+    max-width: 32ch;
+  }
+
+  .grid-sections {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "supervisor"
+      "team-builder"
+      "karma"
+      "calculator";
+  }
 }
